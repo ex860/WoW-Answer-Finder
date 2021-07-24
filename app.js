@@ -6,12 +6,9 @@ import express from 'express';
 
 const config = {
     channelId: '1638251402',
-    channelSecret: '263f5184acd053d9f3f83d89befbf012',
-    channelAccessToken:
-        'Q0Y5R1PLj0W7VWoM+bVsrMw6+mUSruXc/xBVCgeprZsHBMGeMmNeKEOceKP3LQyo6F6f6CtYSlSq0NfpskgW0I8IWA/QrHh8opaHhVIbsbP3G3uLPb0U3RYJYWyfqdiZ6Ti0jQcu4qP8M7Xq/IV4GAdB04t89/1O/w1cDnyilFU=',
+    channelSecret: process.env.SECRET,
+    channelAccessToken: process.env.ACCESS_TOKEN,
 };
-
-console.log('process.env', process.env);
 
 const client = new Client(config);
 const app = express();
