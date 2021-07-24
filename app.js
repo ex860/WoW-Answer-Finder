@@ -5,7 +5,6 @@ import cheerio from 'cheerio';
 import express from 'express';
 
 const config = {
-    channelId: '1638251402',
     channelSecret: process.env.SECRET,
     channelAccessToken: process.env.ACCESS_TOKEN,
 };
