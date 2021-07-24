@@ -96,7 +96,7 @@ app.post('/linewebhook', middleware(config), (req, res) => {
     });
 });
 
-app.listen(8080, () => {
+app.listen(process.env.PORT || 80, () => {
     console.log('[BOT已準備就緒]');
 });
 
