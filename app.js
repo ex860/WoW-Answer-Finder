@@ -10,6 +10,9 @@ const config = {
     channelAccessToken:
         'Q0Y5R1PLj0W7VWoM+bVsrMw6+mUSruXc/xBVCgeprZsHBMGeMmNeKEOceKP3LQyo6F6f6CtYSlSq0NfpskgW0I8IWA/QrHh8opaHhVIbsbP3G3uLPb0U3RYJYWyfqdiZ6Ti0jQcu4qP8M7Xq/IV4GAdB04t89/1O/w1cDnyilFU=',
 };
+
+console.log('process.env', process.env);
+
 const client = new Client(config);
 const app = express();
 const STAGE = {
