@@ -144,12 +144,15 @@ const findAnswers = (question, candidates, userId) => {
             });
         })
         .then(() => {
-            client.pushMessage(userId, {
+            const messages = answers.map((answer) => ({
                 type: 'text',
-                text:
-                    answers.join('\n') +
-                    '\n\n-----以上為所有可能的單字-----\n\n請直接輸入下個題目\n或是輸入"end"或是"結束"以離開服務',
+                text: answer,
+            }));
+            messages.push({
+                type: 'text',
+                text: '-----以上為所有可能的單字-----\n\n請直接輸入下個題目\n或是輸入"end"或是"結束"以離開服務',
             });
+            client.pushMessage(userId, messages);
         });
 };
 
